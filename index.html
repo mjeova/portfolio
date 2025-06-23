@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+ 
+  <title>Mateus - Portfólio</title>
+</head>
+
+<body>
+  
+  
+  <div class="particulas"></div>
+  
+
+
+  <nav class="navegacao">
+    <ul class="menu">
+      <li>
+        <a href="#inicio" class="menu-link">Inicio</a>
+      </li>
+
+      <li>
+        <a href="#sobre" class="menu-link">Sobre</a>
+      </li>
+
+      <li>
+        <a href="#projetos" class="menu-link">Projetos</a>
+      </li>
+
+      <li>
+        <a href="#contatos" class="menu-link">Contato</a>
+      </li>
+
+    </ul>
+  </nav>
+
+  <main id="inicio" class="cabecalho">
+
+    <img src="./imagens/eu.JPG" alt="Foto de Mateus Jeová" class="foto-perfil">
+    <h1>Mateus Jeová</h1>
+    <p class="cabecalho-sub-titulo">Desenvolvedor Full Stack</p>
+
+<div class="carrossel-tecnologias">
+  <div class="faixa-rolante">
+    <span>
+      <i class="devicon-html5-plain colored"></i>
+      <i class="devicon-css3-plain colored"></i>
+      <i class="devicon-javascript-plain colored"></i>
+      <i class="devicon-react-original colored"></i>
+      <i class="devicon-nodejs-plain colored"></i>
+      <i class="devicon-mysql-plain colored"></i>
+      <i class="devicon-python-plain colored"></i>
+     
+          
+    </span>
+    
+    <span>
+      <i class="devicon-html5-plain colored"></i>
+      <i class="devicon-css3-plain colored"></i>
+      <i class="devicon-javascript-plain colored"></i>
+      <i class="devicon-react-original colored"></i>
+      <i class="devicon-nodejs-plain colored"></i>
+      <i class="devicon-mysql-plain colored"></i>
+      <i class="devicon-python-plain colored"></i>
+      
+          
+    </span>
+  </div>
+</div>
+
+
+
+  </main>
+
+  <section id="sobre" class="sobre">
+    <h2 class="sobre-titulo">Sobre Mim</h2>
+    <div class="sobre-caixa">
+      <p class="sobre-paragrafo">
+        Olá! Sou um desenvolvedor Full Stack em início de carreira, apaixonado por tecnologia e
+        aprendizado constante. Tenho conhecimentos em HTML, CSS, JavaScript, React, Node.js e MySQL, e estou sempre
+        buscando evoluir minhas habilidades com projetos práticos.</p>
+    </div>
+  </section>
+
+<section id="projetos" class="projetos">
+  <h2 class="projetos-titulo">Meus Projetos</h2>
+
+  <div class="projetos-grid">
+    <div class="projetos-caixa">
+      <img src="./imagens/crud.png" alt="projeto1" class="projetos-imagem">
+      <div class="caixa-texto-projeto">
+        <h3 class="info-projetos">CRUD</h3>
+        <p class="paragrafo-projetos">Feito em React, Node.js, JavaScript.</p>
+      </div>
+    </div> 
+
+    <div class="projetos-caixa">
+      <img src="./imagens/mosquito.png" alt="projeto2" class="projetos-imagem">
+      <div class="caixa-texto-projeto">
+        <h3 class="info-projetos">Mata Mosquito</h3>
+        <p class="paragrafo-projetos">Feito com base em estudos da Udemy (HTML, CSS E JS PURO)</p>
+      </div>
+    </div> 
+  </div> 
+</section>
+
+
+
+  <section id="contatos" class="contatos">
+    <h2 class="contatos-titulo">Entre em Contato</h2>
+    <div>
+    
+
+  <form class="formulario-contato" id="formulario" onsubmit="enviarWpp(event)">
+    <div class="grupo-form">
+      <input placeholder="Nome" class="campo-form" id="nome" required>
+    </div>
+
+    <div class="grupo-form">
+      <textarea class="campo-form" placeholder="Digite sua Mensagem" rows="4" id="mensagem" required></textarea>
+    </div>
+
+    <button type="submit" class="botao-form">Enviar WhatsApp</button>
+  </form>
+</section>
+
+<script>
+  function enviarWpp(event) {
+    event.preventDefault();
+
+    const nome = document.getElementById('nome').value.trim();
+    const mensagem = document.getElementById('mensagem').value.trim();
+    const telefone = '5569999666532';
+
+    if (!nome || !mensagem) {
+      alert('Por favor, preencha o nome e a mensagem.');
+      return;
+    }
+
+    const texto = `Olá! Me chamo ${nome}, ${mensagem}`;
+    const msgFormatada = encodeURIComponent(texto);
+
+    const url = `https://wa.me/${telefone}?text=${msgFormatada}`;
+
+    console.log(url);
+
+    window.open(url, '_blank');
+  }
+</script>
+
+<footer style="text-align:center; padding:20px; background:#222; color:#fff;">
+  <p>Conecte-se comigo:</p>
+  <a href="https://github.com/mjeova" target="_blank" style="margin: 0 15px; color: #fff; text-decoration:none; font-size: 32px;" aria-label="GitHub">
+    <svg height="32" width="32" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38
+      0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+      -.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64
+      -.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 012
+      -.27c.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15
+      0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013
+      8.013 0 0016 8c0-4.42-3.58-8-8-8z"/>
+    </svg>
+  </a>
+  <a href="https://linkedin.com/in/mateus-araújo-26642b207/" target="_blank" style="margin: 0 15px; color: #0077B5; text-decoration:none; font-size: 32px;" aria-label="LinkedIn">
+    <svg height="32" width="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+      <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.025-3.037-1.852-3.037-1.853
+      0-2.136 1.445-2.136 2.939v5.667H9.352V9h3.414v1.561h.049c.476-.9
+      1.637-1.852 3.369-1.852 3.602 0 4.268 2.37 4.268 5.455v6.288zM5.337
+      7.433c-1.144 0-2.067-.926-2.067-2.067 0-1.143.923-2.067
+      2.067-2.067 1.143 0 2.066.924
+      2.066 2.067 0 1.141-.923 2.067-2.066
+      2.067zm1.777 13.019H3.56V9h3.554v11.452zM22.225
+      0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.228.792
+      24 1.771 24h20.451C23.2 24 24 23.228 24
+      22.271V1.729C24 .774 23.2 0 22.225 0z"/>
+    </svg>
+  </a>
+</footer>
+
+
+</body>
+
+</html>
